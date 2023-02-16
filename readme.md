@@ -7,7 +7,7 @@ The REST API is designed to work with user messages.
 Add feedback
 
 ```bash
-@ POST api//feedback
+@ POST api/feedback
 
 Content-Type: application/json
 RequestBody: {
@@ -20,5 +20,5 @@ RequestBody: {
 Get all feedbacks
 
 ```bash
-@ GET api//feedback
+@ GET api/feedback
 ```
