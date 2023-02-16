@@ -15,7 +15,16 @@ class feedbackController {
       },
     });
   }
-  async getAllFeedbacks(req, res) {}
+	async getAllFeedbacks(req, res) {
+		const feedbacks = await db.query("SELECT * FROM reachOut");
+		res.json({
+      status: "success",
+      code: 200,
+      data: {
+        newFeedback: feedbacks.rows,
+      },
+    });
+  }
 }
 
 module.exports = new feedbackController();
